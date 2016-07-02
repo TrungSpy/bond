@@ -18,6 +18,12 @@ class MessageController < ApplicationController
     end
   end
 
+  def search_by_room_id
+    @messages = Message.where(room_id: params[:room_id])
+
+    render json: @messages
+  end
+
   private
     def set_room
       @room = Room.find(params[:id])

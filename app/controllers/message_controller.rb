@@ -7,7 +7,7 @@ class MessageController < ApplicationController
 
   def create
     @message = Message.new(
-      body: params[:body],
+      icon_type: params[:icon_type],
       room_id: params[:room_id]
     )
 

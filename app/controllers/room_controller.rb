@@ -1,5 +1,5 @@
 class RoomController < ApplicationController
-  before_action :set_room, only: [:show]
+  before_action :set_room, only: [:show, :update]
 
   def show
     render json: @room

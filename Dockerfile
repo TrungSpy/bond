@@ -14,6 +14,7 @@ RUN bundle install
 COPY . /usr/src/app
 
 RUN bundle exec rake db:migrate
+RUN bundle exec rake db:seed
 
 EXPOSE 3000
 CMD ["bundle", "exec", "unicorn", "-p", "3000", "-c", "./config/unicorn_conf.rb"]

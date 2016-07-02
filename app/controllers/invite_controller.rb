@@ -1,10 +1,17 @@
 class InviteController < ApplicationController
-  def new
-    @invite = Invite.new
+  before_action :set_invite, only: [:show]
+
+  def show
+    render json: @invite
   end
 
   def create
-    @invite = Invite.new(params)
+    @invite = Invite.new(
+      lat: params[:lat],
+      lon: params[:lon],
+      category: params[:category] || 0,
+      status: :inviting
+    )
 
     if @invite.save
       render json: @invite, status: :created, location: @invite
@@ -26,4 +33,9 @@ class InviteController < ApplicationController
 
     render json: @invites
   end
+
+  private
+    def set_invite
+      @invite = Invite.find(params[:id])
+    end
 end

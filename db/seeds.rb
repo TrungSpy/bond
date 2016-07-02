@@ -8,7 +8,6 @@
 
 Invite.destroy_all
 
-
 ## ビール
 # テング酒場 渋谷
 Invite.create(

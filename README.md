@@ -38,10 +38,9 @@ See [Gemfile](https://github.com/ayemos/bond/blob/master/Gemfile)
 │     ┌────┴──────┴─────┐    │                          
 └─────┤alibaba.ayemos.me├────┘                          
       │ (47.88.xxx.yyy) │                               
-      └─────────────────┘                               
-                                                        
-       ┌───────▲───────┐                                
-       │ bond_a│p(iOS) │                                
-       └───────┴───────┘                                
-
+      └────────▲────────┘                               
+               │                                        
+       ┌───────┴───────┐                                
+       │ bond_app(iOS) │                                
+       └───────────────┘                                
 ```

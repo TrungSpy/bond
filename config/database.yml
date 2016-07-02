@@ -10,14 +10,8 @@ default: &default
   timeout: 5000
 
 development:
-  adapter: mysql2
-  encoding: utf8mb4
-  reconnect: false
-  database: bond_db
-  pool: 5
-  username: ayemos
-  password: D=xC94QTwzhtpWXyKhhU
-  host: rm-t4n0k8f7h7r79161i.mysql.rds.aliyuncs.com
+  <<: *default
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

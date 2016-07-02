@@ -13,8 +13,6 @@ listen 3000
 pid "#{RAILS_ROOT}/log/unicorn.pid"
 
 # By default, the Unicorn Logger will write to stderr.
-stderr_path "#{RAILS_ROOT}/log/unicorn.log"
-stdout_path "#{RAILS_ROOT}/log/unicorn.log"
 
 preload_app true
 # check_client_connection false

@@ -1,7 +1,7 @@
 # alibaba_server
 
-# Run(WIP)
+# Run on your server
 ```
-bundle install --path vendor/bundle
-bundle exec rails s
+docker build -t bond .
+docker run -p 3000:3000 bond
 ```

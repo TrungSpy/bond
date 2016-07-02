@@ -31,5 +31,3 @@ gem 'unicorn'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'geokit-rails'
-
-gem 'websocket-rails'

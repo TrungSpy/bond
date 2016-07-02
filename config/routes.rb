@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :room, only: [:create, :show]
 
-  resources :message, only: [:create]
+  resources :message, only: [:create, :show]
 
   resources :invite, only: [:index, :create, :show]
   get 'invite/search', to: 'invite#search'

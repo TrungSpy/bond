@@ -10,9 +10,10 @@ WORKDIR /usr/src/app
 COPY Gemfile /usr/src/app/
 COPY Gemfile.lock /usr/src/app/
 RUN bundle install
-RUN bundle exec rake db:migrate
 
 COPY . /usr/src/app
+
+RUN bundle exec rake db:migrate
 
 EXPOSE 3000
 CMD ["./bin/rails", "server", "-b", "0.0.0.0"]

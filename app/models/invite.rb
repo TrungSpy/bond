@@ -5,7 +5,13 @@ class Invite < ActiveRecord::Base
                    lat_column_name: :lat,
                    lng_column_name: :lon)
 
-  enum status: { cancelled: -1, inviting: 0, succeeded: 1 }
+  enum status: {
+    cancelled: -1,
+    waiting: 0,
+    inviting: 1,
+    succeeded: 2
+  }
+
   enum category: {
     beer: 0,
     sushi: 1,

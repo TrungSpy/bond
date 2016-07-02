@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :message, only: [:create, :show]
 
-  resources :invite, only: [:index, :create, :show]
+  resources :invite, only: [:index, :create, :show, :update]
   get 'invite/search', to: 'invite#search'
 
   # The priority is based upon order of creation: first created -> highest priority.

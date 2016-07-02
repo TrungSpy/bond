@@ -1,5 +1,11 @@
 class InviteController < ApplicationController
-  before_action :set_invite, only: [:show]
+  before_action :set_invite, only: [:show, :update]
+
+  def index
+    @invites = Invite.all
+
+    render json: @invites
+  end
 
   def show
     render json: @invite
@@ -20,10 +26,13 @@ class InviteController < ApplicationController
     end
   end
 
-  def index
-    @invites = Invite.all
+  def update
+    if @invite.update(set_params)
+      render json: @invite, status: :created, location: @invite
+    else
+      render json: @invite.errors, status: :unprocessable_entity
+    end
 
-    render json: @invites
   end
 
   def search
@@ -37,5 +46,9 @@ class InviteController < ApplicationController
   private
     def set_invite
       @invite = Invite.find(params[:id])
+    end
+
+    def set_params
+      params.permit(:id, :status, :category)
     end
 end

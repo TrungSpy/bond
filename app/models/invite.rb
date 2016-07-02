@@ -5,6 +5,8 @@ class Invite < ActiveRecord::Base
                    lat_column_name: :lat,
                    lng_column_name: :lon)
 
+  has_one :room
+
   enum status: {
     cancelled: -1,
     waiting: 0,

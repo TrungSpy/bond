@@ -16,4 +16,4 @@ COPY . /usr/src/app
 RUN bundle exec rake db:migrate
 
 EXPOSE 3000
-CMD ["./bin/rails", "server", "-b", "0.0.0.0"]
+CMD ["bundle", "exec", "unicorn", "-p", "3000", "-c", "./config/unicorn_conf.rb"]

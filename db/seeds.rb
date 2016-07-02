@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Invite.destroy_all
+
+# テング酒場 渋谷
+Invite.create(
+  lat: 35.6591244,
+  lon: 139.696724,
+  category: 1,
+  status: 0
+)
+

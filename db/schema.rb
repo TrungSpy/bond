@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160702075311) do
+ActiveRecord::Schema.define(version: 20160702081118) do
 
-  create_table "hoges", force: :cascade do |t|
-    t.string   "body"
+  create_table "invites", force: :cascade do |t|
+    t.float    "lat"
+    t.float    "lon"
+    t.integer  "limit"
+    t.integer  "category",   limit: 1, default: 0, null: false
+    t.integer  "status",     limit: 1, default: 0, null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

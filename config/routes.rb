@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'messages/new'
+
+  get 'messages/create'
+
   get 'invite/search', to: 'invite#search'
   get 'invites', to: 'invite#index'
 

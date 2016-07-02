@@ -20,6 +20,7 @@ $ curl http://{your docker ip}:3000/invite
 See [Gemfile](https://github.com/ayemos/bond/blob/master/Gemfile)
 
 # Architecture
+```
 ┌────────────────────────────┐      ┌──────────────────┐
 │ @eddie (Alibaba Cloud ECS) ◀──────▶ ApsaraDB (mysql) │
 │      ┌──────────────┐      │      └──────────────────┘
@@ -44,3 +45,4 @@ See [Gemfile](https://github.com/ayemos/bond/blob/master/Gemfile)
        ┌───────┴───────┐
        │ bond_app(iOS) │
        └───────────────┘
+```

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160702110728) do
+ActiveRecord::Schema.define(version: 20160702224406) do
 
   create_table "invites", force: :cascade do |t|
     t.float    "lat"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20160702110728) do
     t.integer  "invite_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "target_lat"
+    t.float    "target_lon"
   end
 
   add_index "rooms", ["invite_id"], name: "index_rooms_on_invite_id"

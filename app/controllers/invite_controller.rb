@@ -27,7 +27,7 @@ class InviteController < ApplicationController
   end
 
   def update
-    if @invite.update(set_params)
+    if @invite.update(invite_params)
       render json: @invite, status: :created, location: @invite
     else
       render json: @invite.errors, status: :unprocessable_entity
@@ -48,7 +48,7 @@ class InviteController < ApplicationController
       @invite = Invite.find(params[:id])
     end
 
-    def set_params
+    def invite_params
       params.permit(:id, :status, :category)
     end
 end

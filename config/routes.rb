@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :room, only: [:create, :show]
+  resources :room, only: [:create, :show, :update]
   post 'room/search_by_invite_id', to: 'room#search_by_invite_id'
 
   resources :message, only: [:create, :show]

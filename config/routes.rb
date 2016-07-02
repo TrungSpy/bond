@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'invite/search'
+  get 'invite/search', to: 'invite#search'
+  get 'invites', to: 'invite#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

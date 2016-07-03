@@ -1,6 +1,12 @@
 class RoomController < ApplicationController
   before_action :set_room, only: [:show, :update]
 
+  def index
+    @rooms = Room.all
+
+    render json: @rooms
+  end
+
   def show
     render json: @room
   end

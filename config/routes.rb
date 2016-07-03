@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'message/search_by_room_id', to: 'message#search_by_room_id'
   post 'message/search_by_room_id', to: 'message#search_by_room_id'
-  resources :message, only: [:create, :show]
+  resources :message, only: [:index, :create, :show]
 
   get 'invite/search', to: 'invite#search'
   resources :invite, only: [:index, :create, :show, :update]

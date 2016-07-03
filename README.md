@@ -40,8 +40,7 @@ See [Gemfile](https://github.com/ayemos/bond/blob/master/Gemfile)
 │      └───┬──────┬──┘       │                          
 │          │ :80  │          │                          
 │     ┌────┴──────┴─────┐    │                          
-└─────┤alibaba.ayemos.me├────┘                          
-      │ (47.88.xxx.yyy) │                               
+└─────┤  47.88.xxx.yyy  ├────┘                          
       └────────▲────────┘                               
                │                                        
        ┌───────┴───────┐                                

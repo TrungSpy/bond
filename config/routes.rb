@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'room/search_by_invite_id', to: 'room#search_by_invite_id'
   resources :room, only: [:index, :create, :show, :update]
 
+  get 'message/search_by_room_id', to: 'message#search_by_room_id'
   post 'message/search_by_room_id', to: 'message#search_by_room_id'
   resources :message, only: [:create, :show]
 

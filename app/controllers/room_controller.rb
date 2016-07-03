@@ -32,6 +32,7 @@ class RoomController < ApplicationController
   end
 
   def search_by_invite_id
+    p @room
     @room =  Room.where(invite_id: params[:invite_id]).first
 
     render json: @room || []

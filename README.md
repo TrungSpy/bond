@@ -1,5 +1,7 @@
 # bond_server
 
+Backend API server for [bond](https://github.com/smurakami/AlibabaClient) build with Rails::API.
+
 # Run on your server
 ```
 $ git clone https://github.com/ayemos/bond
@@ -8,6 +10,8 @@ $ docker build -t bond .
 $ docker run -p 3000:3000 bond
 # Access http://{your docker ip}:3000
 ```
+
+:innocent:
 
 # Sample Endpoint
 ```

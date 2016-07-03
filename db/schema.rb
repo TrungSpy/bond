@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160702230016) do
+ActiveRecord::Schema.define(version: 20160703031844) do
 
   create_table "invites", force: :cascade do |t|
     t.float    "lat"
@@ -25,9 +25,10 @@ ActiveRecord::Schema.define(version: 20160702230016) do
 
   create_table "messages", force: :cascade do |t|
     t.integer  "room_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "icon_type"
+    t.integer  "tag",        limit: 1, default: 0, null: false
   end
 
   add_index "messages", ["room_id"], name: "index_messages_on_room_id"

@@ -1,6 +1,12 @@
 class MessageController < ApplicationController
   before_action :set_message, only: [:show]
 
+  def index
+    @messages = Message.all
+
+    render json: @messages
+  end
+
   def show
     render json: @message
   end
@@ -8,6 +14,7 @@ class MessageController < ApplicationController
   def create
     @message = Message.new(
       icon_type: params[:icon_type],
+      tag: params[:tag],
       room_id: params[:room_id]
     )
 

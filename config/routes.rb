@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :room, only: [:create, :show, :update]
   post 'room/search_by_invite_id', to: 'room#search_by_invite_id'
+  resources :room, only: [:create, :show, :update]
 
-  resources :message, only: [:create, :show]
   post 'message/search_by_room_id', to: 'message#search_by_room_id'
+  resources :message, only: [:create, :show]
 
-  resources :invite, only: [:index, :create, :show, :update]
   get 'invite/search', to: 'invite#search'
+  resources :invite, only: [:index, :create, :show, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
